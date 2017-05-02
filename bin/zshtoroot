@@ -1,0 +1,4 @@
+sudo chsh -s /bin/zsh root
+sudo cp $HOME/.oh-my-zsh /root/.om-my-zsh
+sudo cp $HOME/.zshrc /root/.zshrc
+
