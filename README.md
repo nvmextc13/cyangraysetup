@@ -1,1 +1,3 @@
-# cyangraysetup ² âœ“ ² 570 ² 17:47:38
+# Simple setup of i3-gaps, bumblebee, conky and zsh
+
+
