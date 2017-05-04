@@ -5,8 +5,10 @@ These are just config files.
 All these files should go in $HOME, on a default setup.
 
 This is where I setup everything from;
-[powerlevel9k for oh-my-zsh] (https://github.com/bhilburn/powerlevel9k)
-[bumblebee status] (https://github.com/tobi-wan-kenobi/bumblebee-status)
-[i3-gaps] (https://github.com/Airblader/i3)
+powerlevel9k for oh-my-zsh - https://github.com/bhilburn/powerlevel9k
 
-[Erik Dubois] (https://github.com/erikdubois) Found alot of good info here
+bumblebee status - https://github.com/tobi-wan-kenobi/bumblebee-status
+
+i3-gaps - https://github.com/Airblader/i3
+
+Erik Dubois - https://github.com/erikdubois
