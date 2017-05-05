@@ -12,9 +12,6 @@
 
   export TERM="xterm-256color"
 
-  # timestamp for history
-#export HISTTIMEFORMAT="%h %d %H:%M:%S "
-
 # awesome powerline fonts
 # https://github.com/gabrielelana/awesome-terminal-fonts
 # https://github.com/chris-murray/powerlevel9k-custom#option-2-install-awesome-powerline-fonts
@@ -62,7 +59,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
