@@ -91,7 +91,7 @@ exec ~/.config/i3/start-conkys.sh
 bar {
 	#This status command requires bumblebee-status. You must change it to your desired settings!
 	#	https://github.com/tobi-wan-kenobi/bumblebee-status
-	status_command ~/.config/bumblebee-status/bumblebee-status -m cpu sensors memory nic datetime amixer battery -p nic.exclude="enp0s25,lo" datetime.format="%a, %b %d, %Y at %I:%M %p" -t cyangray
+	status_command ~/.config/bumblebee-status/bumblebee-status -m cpu sensors memory nic datetime amixer battery -p nic.exclude="enp0s25,lo" datetime.format="%a, %b %d, %Y at %I:%M %p" -t solarized-powerline
 
 	colors {
 			# Type             border  background font
@@ -227,7 +227,7 @@ bindsym $mod+Shift+0	move container to workspace $ws10
 ############################################################################################################################################################################PROGRAMS####################################################################################################################################################################################
 
 bindsym $mod+w 			exec firefox
-bindsym $mod+Shift+w 	exec /usr/bin/tllor-browser-en.sh
+bindsym $mod+Shift+w 	exec /usr/bin/tor-browser-en.sh
 #-- no-startup-id i3-msg ~/Documents/tor-browser_en-US/Browser/start-tor-browser
 
 #bindsym $mod+g 		
