@@ -91,7 +91,7 @@ exec ~/.config/i3/start-conkys.sh
 bar {
 	#This status command requires bumblebee-status. You must change it to your desired settings!
 	#	https://github.com/tobi-wan-kenobi/bumblebee-status
-	status_command ~/.config/bumblebee-status/bumblebee-status -m cpu sensors memory nic datetime amixer battery -p nic.exclude="enp0s25,lo" datetime.format="%a, %b %d, %Y at %I:%M %p" -t solarized-powerline
+	status_command ~/.config/bumblebee-status/bumblebee-status -m cpu sensors memory nic datetime amixer battery -p nic.exclude="enp0s25,lo" datetime.format="%a, %b %d, %Y at %I:%M %p" -t cyangray
 
 	colors {
 			# Type             border  background font
