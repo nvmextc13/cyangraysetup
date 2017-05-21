@@ -23,7 +23,7 @@
 #Needed for i3-gaps
 #hide_edge_borders both
 #for_window [class="^.*"] border pixel 0 
-gaps inner 15 
+gaps inner 15
 gaps outer 15
 
 # Hybrid colors
@@ -38,15 +38,17 @@ set $red	#B58900
 set $orange	#E59847
 set $cyan	#2AA198
 set $dark #00252E
-set $mygray	#303030
+set $mygray	#202020
 set $mycyan #0087d7
+set $offwhite #eee8d5
+set $myorange #FF8A00
 
 
 #### window colors
 #class                  border  backgr. text    indicator
-client.focused			$white  $mycyan  #000000    $dark
-client.unfocused		$dark   #000000  $mycyan   $white
-client.focused_inactive	$dark   #000000   $mycyan   $white
+client.focused			$mygray  $mycyan  $offwhite    $dark
+client.unfocused		$mygray   $mygray  $mycyan   $white
+client.focused_inactive	$mygray $mygray   $mycyan   $white
 client.urgent $orange $orange $dark $white
 
 ########################################startup
@@ -91,13 +93,13 @@ exec ~/.config/i3/start-conkys.sh
 bar {
 	#This status command requires bumblebee-status. You must change it to your desired settings!
 	#	https://github.com/tobi-wan-kenobi/bumblebee-status
-	status_command ~/.config/bumblebee-status/bumblebee-status -m cpu sensors memory nic datetime amixer battery -p nic.exclude="enp0s25,lo" datetime.format="%a, %b %d, %Y at %I:%M %p" -t solarized-powerline
-
+	status_command ~/.config/bumblebee-status/bumblebee-status -m cpu sensors memory nic datetime amixer battery -p nic.exclude="enp0s25,lo" datetime.format="%a, %b %d, %Y at %I:%M %p" -t cyangray
+font pango:DroidSansMono for Powerline 8
 	colors {
 			# Type             border  background font
-	focused_workspace  #000000 $mycyan #000000
+	focused_workspace  $mycyan $mycyan $offwhite
 	active_workspace   #333333 #5f676a #ffffff
-	inactive_workspace #000000 $mygray #ffffff
+	inactive_workspace $mygray $mygray $mycyan
 	urgent_workspace   #aa0000 #990000 #ffffff
 	}
 	}
@@ -280,16 +282,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym j resize shrink width 2 px or 2 ppt
+        bindsym k resize grow height 2 px or 2 ppt
+        bindsym l resize shrink height 2 px or 2 ppt
+        bindsym semicolon resize grow width 2 px or 2 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 2 px or 2 ppt
+        bindsym Down resize grow height 2 px or 2 ppt
+        bindsym Up resize shrink height 2 px or 2 ppt
+        bindsym Right resize grow width 2 px or 2 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -314,24 +316,24 @@ mode "$mode_gaps" {
 }
 
 mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
+        bindsym plus  gaps inner current plus 2
+        bindsym minus gaps inner current minus 2
         bindsym 0     gaps inner current set 0
 
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+plus  gaps inner all plus 2
+        bindsym Shift+minus gaps inner all minus 2
         bindsym Shift+0     gaps inner all set 0
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
 mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
+        bindsym plus  gaps outer current plus 2
+        bindsym minus gaps outer current minus 2
         bindsym 0     gaps outer current set 0
 
-        bindsym Shift+plus  gaps outer all plus 5
-        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+plus  gaps outer all plus 2
+        bindsym Shift+minus gaps outer all minus 2
         bindsym Shift+0     gaps outer all set 0
 
         bindsym Return mode "default"

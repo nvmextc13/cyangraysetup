@@ -12,6 +12,7 @@
 
   export TERM="xterm-256color"
 
+
 # awesome powerline fonts
 # https://github.com/gabrielelana/awesome-terminal-fonts
 # https://github.com/chris-murray/powerlevel9k-custom#option-2-install-awesome-powerline-fonts
@@ -21,7 +22,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel9k/cyangray"
 #ZSH_THEME="agnoster2"
 #ZSH_THEME="powerline"
 #ZSH_THEME="random"
@@ -132,20 +133,31 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 #https://github.com/bhilburn/powerlevel9k/wiki/Stylizing-Your-Prompt
 #for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"
 
-POWERLEVEL9K_DIR_HOME_BACKGROUND='236'
+POWERLEVEL9K_DIR_HOME_BACKGROUND='234'
 POWERLEVEL9K_DIR_HOME_FOREGROUND='white'
 
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='032'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='black' 
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='white' 
 
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='136'
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='208'
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='black'
 
 POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='032'
 POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='black'
 
-POWERLEVEL9K_TIME_FOREGROUND='white'
-POWERLEVEL9K_TIME_BACKGROUND='236'
+POWERLEVEL9K_TIME_FOREGROUND='032'
+POWERLEVEL9K_TIME_BACKGROUND='234'
+
+# not working
+#POWERLEVEL9K_ROOT_INDICATOR_FOREGROUND='136'
+#POWERLEVEL9K_ROOT_INDICATOR_BACKGROUND='136'
+#POWERLEVEL9K_DIR_BACKGROUND_JOBS_BACKGROUND='032'
+#POWERLEVEL9K_DIR_BACKGROUND_JOBS_FOREGROUND='black'
+
+# Powerline
+if [[ -r /usr/share/powerline/bindings/zsh/powerline.zsh ]]; then
+    source /usr/share/powerline/bindings/zsh/powerline.zsh
+fi
 
 neofetch
 
