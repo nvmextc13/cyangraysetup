@@ -14,4 +14,4 @@ i3-gaps - https://github.com/Airblader/i3
 
 Erik Dubois - https://github.com/erikdubois
 
-![screenshot](/screenshot.png?raw=true)
+![screenshot](/screenshot2.png?raw=true)
