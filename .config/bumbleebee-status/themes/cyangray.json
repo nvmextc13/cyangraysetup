@@ -3,12 +3,12 @@
 	"defaults": {
 		"separator-block-width": 0,
 		"warning": {
-			"fg": "#002b36",
-			"bg": "#b58900"
+			"fg": "#eee8d5",
+			"bg": "#FF8A00"
 		},
 		"critical": {
-			"fg": "#002b36",
-			"bg": "#dc322f"
+			"fg": "#eee8d5",
+			"bg": "#FF1000"
 		}
 	},
 	"cycle": [

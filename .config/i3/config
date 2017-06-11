@@ -20,9 +20,9 @@
 # Print = PRINT key
 # Tab = TAB key
 
-#Needed for i3-gaps
+#Needed for i3-gaps, remove 'for_window' to have titlebar name
 #hide_edge_borders both
-#for_window [class="^.*"] border pixel 0 
+for_window [class="^.*"] border pixel 3 
 gaps inner 15
 gaps outer 15
 
@@ -86,6 +86,7 @@ exec ~/.config/i3/start-conkys.sh
 #		active_workspace   #333333 #5f676a #ffffff
 #		inactive_workspace #333333 #000000 #999999
 #		urgent_workspace   #aa0000 #990000 #ffffff
+# position top
 #	}
 #}
 
@@ -94,13 +95,14 @@ bar {
 	#This status command requires bumblebee-status. You must change it to your desired settings!
 	#	https://github.com/tobi-wan-kenobi/bumblebee-status
 	status_command ~/.config/bumblebee-status/bumblebee-status -m cpu sensors memory nic datetime amixer battery -p nic.exclude="enp0s25,lo" datetime.format="%a, %b %d, %Y at %I:%M %p" -t cyangray
+position top
 font pango:DroidSansMono for Powerline 8
 	colors {
 			# Type             border  background font
 	focused_workspace  $mycyan $mycyan $offwhite
 	active_workspace   #333333 #5f676a #ffffff
 	inactive_workspace $mygray $mygray $mycyan
-	urgent_workspace   #aa0000 #990000 #ffffff
+	urgent_workspace   $myorange $myorange $offwhite
 	}
 	}
 
@@ -144,7 +146,6 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 bindsym $mod+Pause mode "$mode_system"
-
 
 bindsym $mod+x		exec lock
 bindsym $mod+Shift+x	exec shutdown now
@@ -191,12 +192,18 @@ bindsym $mod+v split v
 bindsym $mod+F11 fullscreen toggle
 
 #Workspaces
-set $ws1 "1: ~$"
-set $ws2 "2: www"
-set $ws3 "3: files"
-set $ws4 "4: abc"
-set $ws5 "5: media"
-set $ws6 "6: ?"
+# terminal
+set $ws1 "1: &#xf120;" 
+# www
+set $ws2 "2: &#xf269;" 
+# folders
+set $ws3 "3: &#xf07b;" 
+# text
+set $ws4 "4: &#xf15c;" 
+# media
+set $ws5 "5: &#xf04b;" 
+# ?
+set $ws6 "6: &#xf1d0;" 
 set $ws7 "7"
 set $ws8 "8" 
 set $ws9 "9" 
